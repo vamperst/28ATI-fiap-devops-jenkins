@@ -1,0 +1,12 @@
+[Unit]
+Description=Jenkins
+After=network.target
+
+[Service]
+User=ubuntu
+Restart=always
+Type=simple
+ExecStart=/usr/local/jenkins/swarm.sh
+
+[Install]
+WantedBy=multi-user.target
